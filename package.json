@@ -1,0 +1,33 @@
+{
+  "name": "socialscene",
+  "version": "1.0.0",
+  "description": "** Event Manager for friend groups ** ## Description The Social Scene Web Application will allow users to create social events such as weekend brunches, group dinners, birthday parties, or other special gatherings. The user may then invite their friends to their events. ## WireFrames ![Wireframes](/images/wireframe.jpg?raw=true \"Wireframes\") ## User Stories - User can log-in - Logged-in user can post events - Logged-in user can invite other Users to their event - All users can read events - The user who created the event can update/destroy the event ## Tables - TABLE #1 - Use a table to store user information to include first_name, last_name, email, phone number, and password  - TABLE #2 - Use a table to store event information to include event_name, date, time, location, description, photos, host's information,  - TABLE #3 - Use Instagram's API to embed photos from Instagram into events (Post-MVP)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimLiederbach/SocialScene.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimLiederbach/SocialScene/issues"
+  },
+  "homepage": "https://github.com/TimLiederbach/SocialScene#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.0",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "path": "^0.12.7",
+    "pg-promise": "^8.4.0"
+  }
+}
