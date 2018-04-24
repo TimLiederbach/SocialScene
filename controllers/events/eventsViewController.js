@@ -1,3 +1,5 @@
+//Ended up not using this ViewController
+
 // function displayEvents(req, res) {
 //   console.log('I send successful responses');
 //   // res.render('I render your events')

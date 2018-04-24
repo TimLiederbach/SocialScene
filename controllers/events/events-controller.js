@@ -1,3 +1,6 @@
+//Ended up not using this controller
+
+
 // const eventsDb = require('../../models/events');
 
 // function getAll(req, res, next) {

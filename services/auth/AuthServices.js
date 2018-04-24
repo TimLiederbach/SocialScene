@@ -7,6 +7,7 @@ const UserDb = require("../../models/users");
 //Import Event model functions
 const EventDb = require('../../models/events');
 
+//Captures login info and compares name and password with db
 function login(req, res, next) {
     let user;
     const loginAttempt = {
@@ -35,6 +36,7 @@ function login(req, res, next) {
     })
 }
 
+//Captures and updates db with new user info
 function register(req, res, next) {
   const salt = parseInt(process.env.SALT)
   const hash = bcrypt.hashSync(req.body.password, salt)
@@ -61,13 +63,11 @@ function register(req, res, next) {
 
 
 
-
 module.exports = {
   login,
   register,
   loginRequired: [
   //Confused about this loginRequired bit; not sure exactly what it does with session
-    /* this is either going to resolve to next(false) or next(null) */
     (req, res, next) => next(!req.session.user || null),
     (err, req, res, next) => res.sendStatus(401),
   ]

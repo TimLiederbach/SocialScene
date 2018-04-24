@@ -1,5 +1,7 @@
+//Requires event model
 const EventDb = require('../models/events');
 
+//function to Create Event: grabs data from req.body, sends as parameter to model
 function createEvent(req, res, next) {
   console.log('about to create Event')
   const event = {
@@ -19,6 +21,7 @@ function createEvent(req, res, next) {
       next(err);
     })
 }
+
 
 function getEventsForUser(req, res, next) {
   console.log('about to get events');
