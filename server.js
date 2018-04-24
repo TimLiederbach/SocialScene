@@ -7,7 +7,9 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
-const authRouter = require('./services/auth/AuthRouter')
+const authRouter = require('./services/auth/AuthRouter');
+
+const userRouter = require('./routes/user-router');
 
 //Invoking express for use through app constant
 const app = express();
@@ -16,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 //Set-up Routers
 // const usersRouter = require('./routes/usersRoutes')
-const eventsRouter = require('./routes/eventsRoutes');
+// const eventsRouter = require('./routes/eventsRoutes');
 
 //Set-up paths for views and public folder
 app.set('view engine', 'ejs');
@@ -48,7 +50,7 @@ app.use(methodOverride('_method'));
 // app.use('/auth', authRouter);
 //Establishing different routes
 app.use('/auth', authRouter);
-app.use('/events', eventsRouter);
+app.use('/user', userRouter);
 
 
 app.get('/', (req, res) => {

@@ -1,0 +1,38 @@
+<% include ../partials/boilerplate %>
+<div>It Works</div>
+<section class="form">
+  <form method="POST" action="/user/event">
+    <div class="field">
+      <p>
+        <input class="input" type="text" placeholder="Event Name" name="event_name">
+      </p>
+    </div>
+    <div class="field">
+      <p>
+        <input class="input" type="date" placeholder="Date" name="calendar_date">
+      </p>
+    </div>
+    <div class="field">
+      <p>
+        <input class="input" type="time" placeholder="Time" name="date_time">
+      </p>
+    </div>
+    <div class="field">
+      <p>
+        <input class="input" type="text" placeholder="Location" name="location">
+      </p>
+    </div>
+    <div class="field">
+      <p>
+        <input class="input" type="text" placeholder="Event Description" name="description">
+      </p>
+    </div>
+    <div class="field">
+      <p>
+        <input type='submit' value='Submit Event' class="button" />
+      </p>
+    </div>
+  </form>
+</div>
+
+<% include ../partials/end %>

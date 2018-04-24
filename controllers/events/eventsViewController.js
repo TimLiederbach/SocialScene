@@ -1,11 +1,11 @@
-function displayEvents(req, res) {
-  console.log('I send successful responses');
-  // res.render('I render your events')
-    // 'events/index', {
-    // events: res.locals.events
-  }
+// function displayEvents(req, res) {
+//   console.log('I send successful responses');
+//   // res.render('I render your events')
+//     // 'events/index', {
+//     // events: res.locals.events
+//   }
 
 
-module.exports = {
-  displayEvents
-}
+// module.exports = {
+//   displayEvents
+// }

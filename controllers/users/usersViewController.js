@@ -8,8 +8,21 @@ function displayRegisterForm(req, res) {
   };
 
 function  handleUserProfile(req, res) {
-        res.render('auth/profile');
-    // res.redirect('/users/profile');
+    console.log(res.locals.events)
+    res.redirect('/user/profile', {
+      events: res.locals.events
+    });
+};
+
+// function sendStudents(req, res) {
+//   console.log('I send successful responses');
+//   res.render('students/index', {
+//     students: res.locals.students
+//   })
+// }
+
+function  handleEvent(req, res) {
+    res.redirect('/user/event');
 };
 
 // function displayEvent(req, res) {
@@ -19,5 +32,6 @@ function  handleUserProfile(req, res) {
 module.exports = {
     displayLoginForm,
     displayRegisterForm,
-    handleUserProfile
+    handleUserProfile,
+    handleEvent
 };
