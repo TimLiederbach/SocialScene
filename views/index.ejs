@@ -1,9 +1,16 @@
-<% include ./partials/boilerplate.ejs%>
+<% include ./partials/boilerplate%>
+    <h1>Social Scene</h1>
 
-    <div id="index">
-        <img src="index_image.jpg" alt="Picture of Event Planner">
+    <h3>"Event Manager for Friend Groups"</h3>
+
+    <div class="index_buttons">
         <button class="button"> <a href="/auth/login">Login</a></button>
         <button class="button"> <a href="/auth/register">Register</a></button>
     </div>
 
-    <% include ./partials/end.ejs %>
+    <div class="div-index-image">
+        <img class="index_image" src="index_image.jpg" alt="Picture of Event Planner">
+    </div>
+
+
+    <% include ./partials/end %>
